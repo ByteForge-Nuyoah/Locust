@@ -28,7 +28,11 @@ class ConfigManager:
         
         # 1. Load Global Base
         base_config_path = os.path.join(global_env_dir, "base.yaml")
-        self._config = self._read_yaml(base_config_path)
+        if os.path.exists(base_config_path):
+            self._config = self._read_yaml(base_config_path)
+        else:
+            logging.warning(f"Global base configuration file not found at: {base_config_path}")
+            self._config = {}
         
         # 2. Load Global Env Override
         env_config_path = os.path.join(global_env_dir, f"{env}.yaml")
