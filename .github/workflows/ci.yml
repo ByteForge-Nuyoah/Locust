@@ -36,8 +36,8 @@ jobs:
 
     - name: Verify CI/CD Configuration
       run: |
-        chmod +x verify_cicd.sh
-        ./verify_cicd.sh
+        chmod +x tools/verify_cicd.sh
+        ./tools/verify_cicd.sh
 
     - name: Build Docker image
       run: |
