@@ -1,0 +1,16 @@
+curl 'https://crmapi-dev.spreadwin.cn/base/v4/c/channel/getAllCustomer' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'accept-language: zh-CN,zh;q=0.9,en;q=0.8' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ4amNybSIsInN1YiI6IjVkODlkNjc4ZWYwNzAzMzc2YTQ2NTBhMyIsImV4cCI6MTc3MDg2NTk4MX0.ducWvTsjsGXoOuHm5-0DsTmQdCwflh_HTshp4wbvNcI' \
+  -H 'content-type: application/json' \
+  -H 'origin: https://workspace-dev.spreadwin.cn' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://workspace-dev.spreadwin.cn/' \
+  -H 'sec-ch-ua: "Not(A:Brand";v="8", "Chromium";v="144", "Google Chrome";v="144"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36' \
+  --data-raw '{"appPlatform":"work-space","appVersion":"1.0.1"}'

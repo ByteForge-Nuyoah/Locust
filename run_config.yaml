@@ -1,0 +1,20 @@
+# run.py 全局运行参数配置
+# 支持为不同项目定义独立配置
+# 优先级：命令行参数 > 项目特定配置 > 默认配置
+
+# 默认配置 (所有项目通用)
+default:
+  env: "dev"
+  users: "10"
+  spawn_rate: "2"
+  duration: "10s"
+  auto_close_delay: 20  # 测试报告自动关闭延迟(秒)
+
+# 项目特定配置 (覆盖默认配置)
+projects:
+  crm:
+    users: "20"
+    duration: "30s"
+  website:
+    users: "5"
+    duration: "20s"

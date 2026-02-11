@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: locust-config
+data:
+  LOCUST_LOCUSTFILE: "locustfile.py"
+  # 这里可以放置其他环境变量配置

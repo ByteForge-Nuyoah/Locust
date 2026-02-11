@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locust-worker
+  labels:
+    app: locust-worker
+spec:
+  replicas: 3 # 默认启动 3 个 Worker，可根据压力需求调整
+  selector:
+    matchLabels:
+      app: locust-worker
+  template:
+    metadata:
+      labels:
+        app: locust-worker
+    spec:
+      containers:
+        - name: locust-worker
+          image: my-locust-image:latest # 请替换为实际的镜像仓库地址
+          imagePullPolicy: IfNotPresent
+          args: ["--worker", "--master-host=locust-master"]
+          env:
+            - name: INFLUXDB_HOST
+              value: "influxdb"
+            - name: LOCUST_MODE
+              value: "worker"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "1Gi"
