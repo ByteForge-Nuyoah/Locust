@@ -1,10 +1,17 @@
-locust
-pytest==9.0.2
-influxdb==5.3.2
-psutil==7.2.2
-PyYAML==6.0.3
-requests==2.32.5
-schedule==1.2.2
-beautifulsoup4==4.14.3
-uncurl==0.0.11
-python-dateutil==2.9.0.post0
+# Core Testing Framework
+locust>=2.30.0
+pytest>=8.0.0
+
+# Monitoring & Data Persistence
+influxdb>=5.3.0
+psutil>=6.0.0
+
+# Configuration & Data Handling
+PyYAML>=6.0.0
+requests>=2.31.0
+
+# Utilities
+schedule>=1.2.0
+beautifulsoup4>=4.12.0
+uncurl>=0.0.11
+python-dateutil>=2.8.2
